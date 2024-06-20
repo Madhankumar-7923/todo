@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
+
+    <!--EB GARMOND FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+
+    <!--TEACHERS FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+
+    <!--ROBOTO FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--ICON-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+
+    <div id="loadingOverlay">Loading...</div>
+
+    <div class="background">
+
+        <div class="main">
+
+            <h1 class="header">📝 TO-DO LIST</h1>
+
+            <div class="welcome">
+
+                <p>Welcome to TaskMaster! <br>
+                    Stay organized and conquer your day. <br>
+                    Let's get things done! <br>
+                    ✦ Click on the ➕ icon to add a new task.<br>
+                    ✦ Use the ✅ icon to mark tasks as complete.<br>
+                    ✦ Once you Completed your Task you can 🗑️ delete it.<br>
+                    ✦ Use 🖌️ icon to change the theme you like<br>
+                    Yeah You Learnt it!!
+                </p>
+
+            </div>
+
+            <div class="container">
+
+                <!-- <div class="container-list">
+
+                    <input type="checkbox" id="checkbox" onchange="toggleTask(event)">
+
+                    <p>Welcome to TaskMaster!<br>
+                        Stay organized and conquer your day.<br>
+                        Let's get things done!</p>
+                    
+                    <span> <button onclick="deleteTask(event)" class="dltbtn">Delete</button>date, HH:MM:SS</span>
+                    
+                </div> -->
+
+            </div>
+
+        </div>
+
+        <button class="change-theme"></button>
+
+        <button class="add-btn">+</button>
+
+        <div class="popup-overlay"></div>
+
+    </div>
+
+    <!--TASK ADD POPUP-->
+    <div class="popup-box">
+
+        <div class="popup">
+
+            <div class="content">
+
+                <header>
+                    <h2>ADD A TO-DO</h2>
+
+                    <p class="i  popup-cancel">x</p>
+
+                </header>
+
+                <form action="#">
+
+                    <div class="row-title">
+                        <textarea id="input-box" type="text" placeholder="ADD TASK HERE"></textarea>
+                    </div>
+
+                    <button onclick="hidewelcome(), addTask()" id="popup-add" class="popup-add">ADD</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--THEME POPUP-->
+    <div class="change-background-window">
+
+        <div class="change-background-popup">
+
+            <div class="change-background-popup-header">
+                <h2>Pick Your theme</h2>
+                <p class="background-popup-cancel">x</p>
+            </div>
+
+            <div class="cb" data-image="images/bg1.jpg">
+                <img src="images/bg1.jpg">
+                <p>Default Background</p>
+            </div>
+
+            <div class="cb" data-image="images/bg2.jpg">
+                <img src="images/bg2.jpg">
+                <p>Floral</p>
+            </div>
+
+            <div class="cb" data-image="images/bg3.jpg">
+                <img src="images/bg3.jpg">
+                <p>Color Bomb</p>
+            </div>
+
+            <div class="cb" data-image="images/bg4.jpg">
+                <img src="images/bg4.jpg">
+                <p>Simple</p>
+            </div>
+
+            <div class="cb" data-image="images/bg5.jpg">
+                <img src="images/bg5.jpg">
+                <p>Gift Wrapper</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="index.js" charset="UTF-8"></script>
+
+</body>
+
+</html>
